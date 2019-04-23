@@ -1,1 +1,121 @@
-/* You can add global styles to this file, and also import other style files */
+@charset "utf-8";
+/* CSS Document */
+*{margin:0; padding:0}
+body{font-family:Helvetica, Arial, sans-serif;}
+li{list-style:none}
+.fleft{float:left}
+.fright{float:right}
+.clear { clear: both; }
+.paddingL75{padding-left:75px}
+.marginT50{margin-top:50px}
+.tablesep{border-bottom:1px solid #A4A4A4; margin-bottom: 25px}
+
+.Wraper{width: 1166px; margin: 0 auto}
+.header{height:80px}
+.logo{width:255px; margin-top:10px}
+.nav{width:550px; font-family: 'Yanone Kaffeesatz', sans-serif; color:#fff; margin-left:50px}
+.nav ul li{float:left; font-size: 20px; margin:0 20px; padding-top:20px}
+.nav ul li a{ color:#fff; text-decoration: none}
+.nav ul li a.active{ color:#ffba00; border-top:2px solid #ffba00; padding-top:10px}
+.nav ul li a:hover{ color:#ffba00; border-top:2px solid #ffba00; padding-top:10px}
+.login_header{width:250px; font-size:12px; margin-top:20px}
+.login_header .userImg{width:40px; height: 40px; border-radius: 30px; background-color: #A7A7A7; margin-right:10px}
+.login_header button{width:41px; height: 41px; background: url(assets/images/logout.png) no-repeat; border: none; cursor: pointer}
+.login_header button:hover{background: url(assets/images/logout_hover.png) no-repeat}
+.login_header .logindetails .welcome{display:block; color: #fff;}
+.login_header .logindetails .rank{display:block; color: #d39a37; background: #061736; width:75px}
+.login_header .logindetails {width:100px}
+
+/* .mid{} */
+.mid .slider{width:1045px; margin: 50px auto 0 auto;  overflow: hidden;}
+.mid .sliderbg{width:207px; height: 389px; background: url(assets/images/sliderbg1.png) no-repeat; padding:20px 0; text-align: center; opacity: 0.5;}
+.mid .sliderbg.active{opacity:1; margin:0 60px; cursor: pointer;}
+.mid .sliderbg h4{display: block;font-family: 'Yanone Kaffeesatz', sans-serif;font-size: 24px; font-weight: normal; margin: 10px 0}
+.mid .sliderbg h6{display: block;font-size: 11px;  color: #6E6D6D}
+.mid .sliderbg h5{display: block;font-size: 15px;  color:#1E1D1D; margin-top:20px}
+.mid .sliderbg strong{display: block; font-family: 'Yanone Kaffeesatz', sans-serif; background: #2c4572; color:#fff; width:150px; margin: 0 auto; font-size: 25px; line-height: 33px; font-weight: normal}
+.mid .sliderbg img{display: block; width:75px; margin: 22px auto 0 auto; }
+.mid .sliderbg .daytime{color:#484b50; font-size: 12px; display: block; margin-top:15px; font-weight: bold}
+.mid .sliderbg img:hover{opacity: 0.7; cursor: pointer}
+.mid button{cursor: pointer; width:31px; height: 60px; border: none;}
+.mid button.left{background: url(assets/images/left_arrow.png) no-repeat; margin:15% 50px 0 50px}
+.mid button.right{background:url(assets/images/rightarrow.png) no-repeat; margin:15% 50px 0 50px}
+
+.left_panel{width:207px; height: 507px; background: url(assets/images/sidebg.png) no-repeat}
+.left_panel h4{display: block;font-family: 'Yanone Kaffeesatz', sans-serif;font-size: 24px; font-weight: normal; text-align: center}
+.left_panel h6{display: block;font-size: 11px;  color: #6E6D6D; text-align: center}
+.left_panel h5{display: block;font-size: 15px;  color:#1E1D1D; margin-top:20px; text-align: center}
+.left_panel strong{display: block; font-family: 'Yanone Kaffeesatz', sans-serif; background: #2c4572; color:#fff; width:150px; ; text-align: center; font-size: 25px; line-height: 33px; font-weight: normal}
+.left_panel img{display: block; width:75px; margin: 22px auto 0 auto; }
+.left_panel .daytime{color:#484b50; font-size: 12px; display: block; margin-top:15px; font-weight: bold; text-align: center}
+.left_panel img:hover{opacity: 0.7; cursor: pointer}
+
+.mid_panel{width:555px;margin-left:20px}
+.mid_panel .prediction_field{color:#fff; margin-bottom: 20px}
+.mid_panel .prediction_field .field{background: url(assets/images/transparent_bg.png) repeat; min-height: 38px; border-radius:15px; padding: 5px 10px; line-height: 38px}
+.mid_panel .prediction_field .caption{width:150px; display: inline-block}
+.mid_panel .prediction_field label{min-width:150px; display: inline-block}
+.mid_panel .prediction_field input[type="number"]{width:80px;}
+.mid_panel .prediction_field input[type="text"]{width:300px;}
+
+.mid_panel .ranking{border-radius:15px; border:1px solid #fff; min-height: 165px; padding:10px 20px}
+.mid_panel .ranking ol {list-style: none;counter-reset: my-awesome-counter; display: block;}
+.mid_panel .ranking ol li {counter-increment: my-awesome-counter; padding:10px 0; color:#fff}
+.mid_panel .ranking ol li span{color:#18a2a7; font-size: 11px}
+.mid_panel .ranking ol li::before {content: counter(my-awesome-counter) ". ";color: red;font-weight: bold;}
+
+.mid_panel .results {border-radius:15px; border:1px solid #fff; min-height: 165px; padding:10px 20px}
+.mid_panel .results .winner{background: url(assets/images/transparent_bg.png) repeat; border-radius:15px; padding:10px; width:90px}
+.mid_panel .results .green{font-size:13px; color:#b4ea14; display: block}
+.mid_panel .results .red{font-size:13px; color:#ff0021; display: block}
+.mid_panel .results .white{font-size:17px; color:#fff; display: block}
+/* .mom{} */
+.mom img{width:120px}
+
+.right_panel{width:359px}
+.right_panel .summarypanel{background: url(assets/images/transparent_bg.png) repeat; padding: 10px; border-radius: 15px; margin-bottom:20px; color:#fff}
+.right_panel .summarypanel table{min-width:320px; margin: 0 auto}.right_panel .summarypanel table{min-width:320px; margin: 0 auto}
+.right_panel .summarypanel td{padding:5px 0}
+.right_panel .summarypanel input[type="submit"] {border-radius: 10px;background-color: rgb(44, 175, 146);width: 138px;height: 39px;border:none; font-size: 25px; font-family: 'Yanone Kaffeesatz', sans-serif;color:#fff}
+.submitbtn{width:150px; margin: 20px auto;}
+/* .right_panel .stats{} */
+.right_panel .matchlist{background: url(assets/images/transparent_bg.png) repeat; padding: 10px;height:470px; overflow-y: scroll; border-radius: 15px}
+.right_panel .matchlist ul li{font-weight: bold; color:#b3d5ec;background: url(assets/images/transparent_bg.png) repeat; margin-bottom: 1px; font-size: 12px; padding: 5px; display: block}
+.right_panel .matchlist ul li:hover{color:#ffba00;background: #13364d}
+.right_panel .matchlist ul li.active{color:#ffba00;background: #13364d}
+.right_panel .matchlist span{font-weight: normal; color: #fff}
+.right_panel .matchlist ul li a{color:#b3d5ec; text-decoration: none; display: block}
+
+.lbpanels {background: url(assets/images/transparent_bg.png) repeat;padding: 10px; border-radius: 10px; width:150px; color:#fff; margin:0 5px 5px 0}
+.lbpanels.first{color:#f4da01}
+.lbpanels.second{color:#60d586}
+.lbpanels.third{color:#9815d9}
+.lbpanels h5{display:block; font-weight:normal; font-size:12px}
+.lbpanels strong{display:block; margin-top:5px}
+.lbpanels h6{display:block; font-size:20px; padding:5px; background: #13364d}
+
+.loginpanel{width:325px; height: 365px;background: url(assets/images/transparent_bg.png) repeat;padding: 10px; border-radius: 10px; margin:100px auto 0 auto; text-align: center}
+.loginpanel input[type="text"]{width:237px; height:38px; padding: 0 15px}
+.loginpanel input[type="password"]{width:237px; height:38px; padding: 0 15px; margin: 20px 0}
+.loginpanel input[type="submit"]{width:270px; height:38px; padding: 0 15px;  background: #2caf92; color:#fff; font-size:20px; border:none; cursor: pointer;}
+.loginpanel a{color:#ccc; font-size:12px; font-style: italic}
+.loginpanel img{margin:15px 0}
+.loginpanel strong a{display: block; color:#fff; font-size: 26px; text-decoration: none}
+
+.regpanel{width:325px; height: auto;background: url(assets/images/transparent_bg.png) repeat;padding: 10px 10px 20px 10px; border-radius: 10px; margin:100px auto 0 auto; text-align: center}
+
+.regpanel input[type="text"]{width:237px; height:38px; padding: 0 15px; margin: 10px 0}
+.regpanel input[type="text"]{width:237px; height:38px; padding: 0 15px}
+.regpanel input[type="number"]{width:237px; height:38px; padding: 0 15px; margin: 10px 0}
+.regpanel input[type="submit"]{width:270px; height:38px; padding: 0 15px;margin:10px 0; background: #2caf92; color:#fff; font-size:20px; border:none; cursor: pointer;}
+.regpanel a{color:#ccc; font-size:12px; font-style: italic}
+.regpanel img{margin:15px 0}
+.regpanel strong a{display: block; color:#fff; font-size: 26px; text-decoration: none}
+a.faq{text-decoration: none; font-style: normal; font-weight: bold; color: #ffba00}
+
+
+
+
+
+
+

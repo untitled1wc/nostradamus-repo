@@ -1,0 +1,27 @@
+<div class="border-box">
+  <button (click)="call()">click</button><br/><br/>Ranks :{{ranks | json}}<br/><br/><br/>
+  <button (click)="schedule()">schedule</button><br/><br/><br/><br/><br/>
+  <!-- {{scheduleList | json}} -->
+
+  <table>
+  <thead>
+    <tr>
+    <td>Match</td>
+    <td>Team 1</td>
+    <td>Team 2</td>
+    <td>Date</td>
+    <td>Time</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let game of scheduleList">
+      <td>{{game.matchNumber}}</td>
+      <td>{{game.team1}}</td>
+      <td>{{game.team2}}</td>
+      <td>{{game.matchDate}}</td>
+      <td>{{game.matchTime}}</td>
+      </tr>
+  </tbody>
+
+  </table>
+</div>

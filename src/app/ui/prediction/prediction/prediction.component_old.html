@@ -1,0 +1,35 @@
+<p>
+  Bring out the Nostradamus in You !!!
+</p>
+
+<form #predictionForm="ngForm">
+  <div class="form-group">
+    <label for="toss1">Toss</label>
+    <input type="radio" name="toss" [value]="team1" [(ngModel)]="prediction.toss" id="toss1" />{{team1}}
+    <input type="radio" name="toss" [value]="team2" [(ngModel)]="prediction.toss" id="toss2" />{{team2}}
+  </div>
+  <div class="form-group">
+    <label for="winner1">Winner *</label>
+    <input type="radio" name="winner" [value]="team1" required [(ngModel)]="prediction.winner" id="winner1" (change)="toggleMarginFields()" #winner="ngModel"/>{{team1}}
+    <input type="radio" name="winner" [value]="team2" required [(ngModel)]="prediction.winner" id="winner2" (change)="toggleMarginFields()" #winner="ngModel" />{{team2}}
+    <input type="radio" name="winner" [value]="'TIE'" required [(ngModel)]="prediction.winner" id="tie" (change)="toggleMarginFields()" #winner="ngModel" />Tie
+    <input type="radio" name="winner" [value]="'ABANDONED'" required [(ngModel)]="prediction.winner" id="abandoned" (change)="toggleMarginFields()" #winner="ngModel" />Abandoned
+  </div>
+  <div *ngIf="predictionForm.submitted && !winner.valid">
+    <span class="error">Select a winner</span>
+  </div>
+  <div class="form-group">
+    <label for="winMarginRuns">Win by</label>
+    <input type="text" name="winMarginRuns" numbersOnly maxlength="3" size="3"  [(ngModel)]="prediction.winMarginRuns" id="winMarginRuns" (keyup)="handleInputs($event)" #winMarginRuns /> Runs Or 
+    <input type="text" name="winMarginWickets" numbersOnly  maxlength="2" size="3" [(ngModel)]="prediction.winMarginWickets" id="winMarginWickets" (keyup)="handleInputs($event)" #winMarginWickets  />Wickets
+  </div>
+  <div class="form-group">
+    <label for="manOfMatch">Man Of the Match</label>
+    <input type="text" name="manOfMatch" [(ngModel)]="prediction.manOfMatch" id="manOfMatch" />
+  </div>
+  <div *ngIf="predictionForm.submitted && errorVault.length > 0">
+    <span *ngFor="let errorMsg of errorVault" class="error">{{errorMsg}}</span>
+  </div>
+
+  <button class="btn" type="submit" (click)="submit()">Submit</button>
+</form>
