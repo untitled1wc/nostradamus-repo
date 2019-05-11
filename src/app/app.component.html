@@ -1,7 +1,7 @@
 <div class="Wraper">
 	<div class="header" *ngIf="isLoggedIn">
 		<div class="logo fleft"> <img src="assets/images/logo.png"></div>
-		<div class="nav fleft"> 
+		<div class="nav fleft" *ngIf="notPublicPage"> 
 			<ul>
 				<li><a routerLink="/predict" [ngClass]="{'active':(state=='predict')}" >PREDICT</a></li>
 				<li><a routerLink="/profile" [ngClass]="{'active':(state=='profile')}" > PROFILE</a></li>
@@ -15,10 +15,10 @@
 				&nbsp;
 			</div>
 			<div class="logindetails fleft">
-				<span class="welcome">Welcome John</span>
-				<span class="rank">Rank- 18</span>
+				<span class="welcome">Welcome <br/>{{userProfile.name}}</span>
+				<!-- <span class="rank">Rank- 18</span> -->
 			</div>
-			<button  routerLink="/login" class="fleft">&nbsp;</button>
+			<button  (click)="logoff()" class="fleft">&nbsp;</button>
 		</div>
 	</div>
 	<div class="header" *ngIf="!isLoggedIn">
